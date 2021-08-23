@@ -5,20 +5,20 @@ import { Injectable } from '@angular/core';
 })
 export class UserListService {
 
-  userList: any;
+  userLists: any;
 
   constructor() { }
 
   getData() {
     
-    console.log(this.userList);
+    console.log(this.userLists);
     return localStorage.getItem('userlist')
   }
 
   saveData(data:any) {
     console.log(data);
     localStorage.setItem("userlist", JSON.stringify(data));
-    this.userList = data;
+    this.userLists = data;
    }
 
 
