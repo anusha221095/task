@@ -1,0 +1,31 @@
+<div class="container">
+    <h4>Register</h4>
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+
+        <div class="container">
+            <div class="form-group ">
+                <label for="ofcid">Ofc_id:</label>
+                <input  type="text" class="form-control" id="ofcid" name="ofcid" placeholder="ofcid" ngModel #ofcid="ngModel">
+    
+                <label for="name">Name:</label>
+                <input  type="text" class="form-control" id="name" name="name" placeholder="name" ngModel #name="ngModel">
+    
+                <label for="salary">Salary:</label>
+                <input  type="text" class="form-control" id="salary" name="salary" placeholder="salary" ngModel #salary="ngModel">
+    
+                <label for="designation">Designation:</label>
+                <input  type="text" class="form-control" id="designation" name="designation" placeholder="designation" ngModel #designation="ngModel">
+                
+                
+                <label for="phone">Phone:</label>
+                <input  type="number" class="form-control" id="phone" name="phone" #phone="ngModel" placeholder="phone" ngModel required>
+    
+                <label for="email">email:</label>
+                <input  type="email" class="form-control" id="email" name="email" #email="ngModel" placeholder="email" ngModel required>
+               
+                <button class="btn btn-primary" [disabled]="!registerForm.valid">Submit</button>
+            </div>
+        </div>
+        
+    </form>
+</div>
